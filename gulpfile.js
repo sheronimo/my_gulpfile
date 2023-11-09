@@ -4,7 +4,7 @@ var minify = require('gulp-minify');
 var cleanCss = require('gulp-clean-css');
  
 gulp.task('pack-js', function () {    
-    return gulp.src(['js/theme-script.js', 'js/custom.js', 'js/cart.js'])
+    return gulp.src(['js/custom.js', 'js/cart.js'])
         .pipe(concat('custom.min.js'))
         .pipe(minify({
             ext:{
@@ -28,7 +28,7 @@ gulp.task('pack-js-vendor', function () {
 });
  
 gulp.task('pack-css', function () {    
-    return gulp.src(['css/nouislider.min.css', 'css/animate.css', 'css/pnotify.custom.min.css', 'css/reset.css', 'lib/bootstrap/css/bootstrap.min.css', 'lib/font-awesome/css/font-awesome.css', 'lib/fontawesome5/css/fontawesome.css', 'lib/owl-carousel/css/owl.carousel.css', 'lib/giant2-webfont/style.css', 'css/catalog.css', 'css/custom-old.css', 'css/individual-product.css', 'css/style-pagebuilder.css', 'css/custom.css', 'css/custom-cook-share-love.css', 'css/basic-template.css', 'css/color-config.css', 'css/custom-christmas.css'])
+    return gulp.src(['css/nouislider.min.css', 'css/animate.css', 'css/pnotify.custom.min.css', 'css/reset.css', 'lib/bootstrap/css/bootstrap.min.css', 'lib/owl-carousel/css/owl.carousel.css', 'lib/giant2-webfont/style.css', 'css/catalog.css', 'css/custom-old.css', 'css/individual-product.css', 'css/style-pagebuilder.css', 'css/custom.css', 'css/custom-cook-share-love.css', 'css/basic-template.css', 'css/color-config.css', 'css/custom-christmas.css'])
         .pipe(concat('custom.min.css'))
         .pipe(cleanCss())
    .pipe(gulp.dest('min/css'));
